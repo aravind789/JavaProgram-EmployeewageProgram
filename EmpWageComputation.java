@@ -7,7 +7,10 @@
 	public static int ComputeDailyWage(int hours) {
 		return hours*WAGE_PER_HOUR;
 	public static void main(String[] args) {
-		int attendence=(int)(Math.random()*3);
+		int attendence;
+
+		while(totalWorkingDays<=MAX_WORKING_DAYS) {
+			attendence=(int)(Math.random()*3);
 		switch(attendance) {
 		case FULL_TIME:	System.out.println("Employee is Present fulltime");
 			workHours=8;
@@ -22,10 +25,11 @@
 			}
 		default:	System.out.println("Employee is Absent");
 		}
-		System.out.println("Daily Wage of an Employee "+dailyWage);
+		System.out.println("Daily Wage of an Employee on Day "+totalWorkingDays+" is "+dailyWage);
+		totalWages+=dailyWage;
+		dailyWage=0;
+		totalWorkingDays++;
 	}
-
+		System.out.println("Total Wages in a month = "+totalWages);
+	}
 }
-
-
-
