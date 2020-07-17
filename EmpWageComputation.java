@@ -1,9 +1,9 @@
-public class EmpWageComputation {
+ public class EmpWageComputation {
 	final static int WAGE_PER_HOUR=20;
 	static int dailyWage=0;
 	static int workHours=0;
 	public static int ComputeDailyWage(int hours) {
-		return hours*WAGE_PER_HOUR;
+		return hours*WAGE_PER_H
 	public static void main(String[] args) {
 		int attendence=(int)(Math.random()*3);
 		if(attendence==2)
@@ -15,7 +15,6 @@ public class EmpWageComputation {
 			workHours=4;
 			dailyWage=ComputeDailyWage(workHours);;
 
-	}
 		else
 			System.out.println("Employee is Absent");
 
