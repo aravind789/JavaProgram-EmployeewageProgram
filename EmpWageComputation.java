@@ -1,15 +1,21 @@
  public class EmpWageComputation {
 	final static int WAGE_PER_HOUR=20;
+	final static int MAX_WORKING_DAYS=20;
+	final static int MAX_WORKING_HOURS=100;
 	static int dailyWage=0;
 	static int workHours=0;
 	final static int FULL_TIME=2;
 	final static int PART_TIME=1;
+	static int totalWorkingDays=1;
+	static int totalWages=0;
+	static int totalWorkingHrs=1;
+
 	public static int ComputeDailyWage(int hours) {
 		return hours*WAGE_PER_HOUR;
 	public static void main(String[] args) {
 		int attendence;
 
-		while(totalWorkingDays<=MAX_WORKING_DAYS) {
+		while(totalWorkingDays<=MAX_WORKING_DAYS || totalWorkingHrs<=MAX_WORKING_DAYS) {
 			attendence=(int)(Math.random()*3);
 		switch(attendance) {
 		case FULL_TIME:	System.out.println("Employee is Present fulltime");
